@@ -22,7 +22,7 @@ namespace KuraevGeometryClassLibrary
         public override double GetArea()
         {
             double area;
-            double p = a + b + c;
+            double p = (a + b + c)/2;
             area = Math.Sqrt(p * (p - a) * (p - b) * (p - c));
             return area;
         }
@@ -39,7 +39,6 @@ namespace KuraevGeometryClassLibrary
         public override double GetArea()
         {
             double area;
-            double p = a + b + c;
             area = Math.PI * radius * radius;
             return area;
         }
