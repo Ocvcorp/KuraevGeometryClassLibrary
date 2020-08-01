@@ -4,6 +4,7 @@ using NUnit.Framework;
 using NUnit.Framework.Internal;
 using System;
 using System.Collections.Generic;
+using Assert = NUnit.Framework.Assert;
 
 namespace UnitTestGeometry
 {
@@ -26,7 +27,7 @@ namespace UnitTestGeometry
             Assert.AreEqual(12, area);
             Assert.AreEqual(false, isRectangular);
             //Неверное сочетание сторон
-            Assert.ThrowsException<System.Exception>(() => new Triangle2D(5, 10, 5));
+            Microsoft.VisualStudio.TestTools.UnitTesting.Assert.ThrowsException<Exception>(() => new Triangle2D(5, 10, 5));
         }
         [TestMethod]
         public void TestCircle()
@@ -37,7 +38,7 @@ namespace UnitTestGeometry
         }
 
         [TestMethod]
-        public void GetAreassss()
+        public void GetAreas()
         {
             //расчет площади без указания типа
             Shape2D[] shapes = {
